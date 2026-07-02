@@ -1,4 +1,8 @@
-﻿USE [SecondHandDB]
+﻿IF DB_ID(N'SecondHandDB') IS NULL
+    CREATE DATABASE [SecondHandDB];
+GO
+
+USE [SecondHandDB]
 GO
 /****** 对象:  User [TeamUser]    脚本日期: 2026/6/26 10:20:34 ******/
 CREATE USER [TeamUser] FOR LOGIN [TeamUser] WITH DEFAULT_SCHEMA=[dbo]
@@ -23,7 +27,6 @@ CREATE TABLE [dbo].[goods](
 	[seller_id] [int] NOT NULL,
 	[audit_admin_id] [int] NULL,
 	[audit_time] [datetime] NULL,
-	[is_deleted] [bit] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[goods_id] ASC
@@ -83,7 +86,6 @@ CREATE TABLE [dbo].[users](
 	[created_time] [datetime] NOT NULL,
 	[role_id] [int] NOT NULL,
 	[status] [nvarchar](20) NOT NULL,
-	[is_deleted] [bit] NOT NULL,
 	[email] [nvarchar](100) NULL,
  CONSTRAINT [PK__users__B9BE370FE6604083] PRIMARY KEY CLUSTERED 
 (
@@ -203,8 +205,6 @@ ALTER TABLE [dbo].[users] ADD  CONSTRAINT [UQ__users__F3DBC5724A7EDBE9] UNIQUE N
 GO
 ALTER TABLE [dbo].[goods] ADD  CONSTRAINT [DF_goods_status]  DEFAULT ('待审核') FOR [status]
 GO
-ALTER TABLE [dbo].[goods] ADD  DEFAULT ((0)) FOR [is_deleted]
-GO
 ALTER TABLE [dbo].[goods_images] ADD  CONSTRAINT [DF__goods_ima__sort___76619304]  DEFAULT ((1)) FOR [sort_order]
 GO
 ALTER TABLE [dbo].[goods_images] ADD  CONSTRAINT [DF__goods_ima__uploa__7755B73D]  DEFAULT (getdate()) FOR [upload_time]
@@ -220,8 +220,6 @@ GO
 ALTER TABLE [dbo].[users] ADD  CONSTRAINT [DF__users__created_t__3864608B]  DEFAULT (getdate()) FOR [created_time]
 GO
 ALTER TABLE [dbo].[users] ADD  CONSTRAINT [DF_users_status]  DEFAULT (N'active') FOR [status]
-GO
-ALTER TABLE [dbo].[users] ADD  DEFAULT ((0)) FOR [is_deleted]
 GO
 ALTER TABLE [dbo].[goods]  WITH CHECK ADD FOREIGN KEY([category_id])
 REFERENCES [dbo].[categories] ([category_id])

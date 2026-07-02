@@ -62,6 +62,13 @@ namespace 转一转校园二手物品交易系统
                     try
                     {
                         SqlCommand cmd = new SqlCommand(
+                            @"SELECT COUNT(1) FROM orders WHERE goods_id=@goodsId",
+                            conn, tran);
+                        cmd.Parameters.AddWithValue("@goodsId", goodsId);
+                        if ((int)cmd.ExecuteScalar() > 0)
+                            return (false, "该商品已有订单，无法重复下单");
+
+                        cmd = new SqlCommand(
                             @"SELECT status FROM goods WITH (UPDLOCK) WHERE goods_id=@goodsId",
                             conn, tran);
                         cmd.Parameters.AddWithValue("@goodsId", goodsId);
@@ -88,10 +95,10 @@ namespace 转一转校园二手物品交易系统
                         tran.Commit();
                         return (true, "下单成功！请在「我的订单」中查看");
                     }
-                    catch
+                    catch (Exception ex)
                     {
                         tran.Rollback();
-                        return (false, "下单失败，请重试");
+                        return (false, "下单失败：" + ex.Message);
                     }
                 }
             }
