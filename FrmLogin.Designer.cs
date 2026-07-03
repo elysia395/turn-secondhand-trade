@@ -35,12 +35,12 @@
             lbl_Title.AutoSize = true;
             lbl_Title.BackColor = SystemColors.ControlLightLight;
             lbl_Title.Font = new Font("Microsoft YaHei UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            lbl_Title.Location = new Point(99, 18);
+            lbl_Title.Location = new Point(227, 18);
             lbl_Title.Margin = new Padding(5, 0, 5, 0);
             lbl_Title.Name = "lbl_Title";
-            lbl_Title.Size = new Size(360, 40);
+            lbl_Title.Size = new Size(107, 40);
             lbl_Title.TabIndex = 0;
-            lbl_Title.Text = "二手物品交易系统·登录页";
+            lbl_Title.Text = "登录页";
             lbl_Title.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbl_Pwd
@@ -138,7 +138,7 @@
             // 
             // LoginPanel
             // 
-            LoginPanel.BackColor = Color.Silver;
+            LoginPanel.BackColor = Color.Gainsboro;
             LoginPanel.Controls.Add(lbl_UserName);
             LoginPanel.Controls.Add(lbl_Title);
             LoginPanel.Controls.Add(link_ForgotPwd);
