@@ -17,10 +17,10 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lbl_Search = new Label();
             txt_Search = new TextBox();
             lbl_Category = new Label();
@@ -47,25 +47,28 @@
             // lbl_Search
             // 
             lbl_Search.AutoSize = true;
-            lbl_Search.Location = new Point(30, 20);
+            lbl_Search.Location = new Point(47, 28);
+            lbl_Search.Margin = new Padding(5, 0, 5, 0);
             lbl_Search.Name = "lbl_Search";
-            lbl_Search.Size = new Size(44, 17);
+            lbl_Search.Size = new Size(64, 24);
             lbl_Search.TabIndex = 0;
             lbl_Search.Text = "搜索：";
             // 
             // txt_Search
             // 
-            txt_Search.Location = new Point(80, 17);
+            txt_Search.Location = new Point(126, 24);
+            txt_Search.Margin = new Padding(5, 4, 5, 4);
             txt_Search.Name = "txt_Search";
-            txt_Search.Size = new Size(200, 23);
+            txt_Search.Size = new Size(312, 30);
             txt_Search.TabIndex = 1;
             // 
             // lbl_Category
             // 
             lbl_Category.AutoSize = true;
-            lbl_Category.Location = new Point(30, 48);
+            lbl_Category.Location = new Point(47, 68);
+            lbl_Category.Margin = new Padding(5, 0, 5, 0);
             lbl_Category.Name = "lbl_Category";
-            lbl_Category.Size = new Size(44, 17);
+            lbl_Category.Size = new Size(64, 24);
             lbl_Category.TabIndex = 9;
             lbl_Category.Text = "分类：";
             // 
@@ -73,17 +76,19 @@
             // 
             cbo_Category.DropDownStyle = ComboBoxStyle.DropDownList;
             cbo_Category.FormattingEnabled = true;
-            cbo_Category.Location = new Point(80, 45);
+            cbo_Category.Location = new Point(126, 64);
+            cbo_Category.Margin = new Padding(5, 4, 5, 4);
             cbo_Category.Name = "cbo_Category";
-            cbo_Category.Size = new Size(161, 25);
+            cbo_Category.Size = new Size(251, 32);
             cbo_Category.TabIndex = 10;
             cbo_Category.SelectedIndexChanged += cbo_Category_SelectedIndexChanged;
             // 
             // btn_Search
             // 
-            btn_Search.Location = new Point(300, 17);
+            btn_Search.Location = new Point(471, 24);
+            btn_Search.Margin = new Padding(5, 4, 5, 4);
             btn_Search.Name = "btn_Search";
-            btn_Search.Size = new Size(75, 23);
+            btn_Search.Size = new Size(118, 32);
             btn_Search.TabIndex = 2;
             btn_Search.Text = "搜索";
             btn_Search.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             // btn_Refresh
             // 
-            btn_Refresh.Location = new Point(390, 17);
+            btn_Refresh.Location = new Point(613, 24);
+            btn_Refresh.Margin = new Padding(5, 4, 5, 4);
             btn_Refresh.Name = "btn_Refresh";
-            btn_Refresh.Size = new Size(75, 23);
+            btn_Refresh.Size = new Size(118, 32);
             btn_Refresh.TabIndex = 3;
             btn_Refresh.Text = "全部";
             btn_Refresh.UseVisualStyleBackColor = true;
@@ -104,41 +110,42 @@
             dgv_Goods.AllowUserToAddRows = false;
             dgv_Goods.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_Goods.BackgroundColor = SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgv_Goods.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Goods.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Goods.ColumnHeadersHeight = 30;
             dgv_Goods.Columns.AddRange(new DataGridViewColumn[] { goods_id, col_image, 商品名, 价格, 分类, 卖家, 状态 });
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Window;
-            dataGridViewCellStyle7.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dgv_Goods.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgv_Goods.DefaultCellStyle = dataGridViewCellStyle3;
             dgv_Goods.Dock = DockStyle.Fill;
-            dgv_Goods.Location = new Point(0, 74);
+            dgv_Goods.Location = new Point(0, 104);
+            dgv_Goods.Margin = new Padding(5, 4, 5, 4);
             dgv_Goods.Name = "dgv_Goods";
             dgv_Goods.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Control;
-            dataGridViewCellStyle8.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgv_Goods.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgv_Goods.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgv_Goods.RowHeadersVisible = false;
             dgv_Goods.RowHeadersWidth = 62;
             dgv_Goods.RowTemplate.Height = 60;
             dgv_Goods.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Goods.Size = new Size(533, 400);
+            dgv_Goods.Size = new Size(838, 640);
             dgv_Goods.TabIndex = 4;
             dgv_Goods.CellContentClick += dgv_Goods_CellContentClick;
             dgv_Goods.CellDoubleClick += dgv_Goods_CellDoubleClick;
@@ -146,9 +153,8 @@
             // goods_id
             // 
             goods_id.DataPropertyName = "goods_id";
-            dataGridViewCellStyle6.Format = "0000";
-            goods_id.DefaultCellStyle = dataGridViewCellStyle6;
-            goods_id.FillWeight = 100F;
+            dataGridViewCellStyle2.Format = "0000";
+            goods_id.DefaultCellStyle = dataGridViewCellStyle2;
             goods_id.HeaderText = "商品 ID";
             goods_id.MinimumWidth = 8;
             goods_id.Name = "goods_id";
@@ -209,9 +215,10 @@
             // btn_Prev
             // 
             btn_Prev.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_Prev.Location = new Point(319, 443);
+            btn_Prev.Location = new Point(506, 682);
+            btn_Prev.Margin = new Padding(5, 4, 5, 4);
             btn_Prev.Name = "btn_Prev";
-            btn_Prev.Size = new Size(65, 25);
+            btn_Prev.Size = new Size(102, 35);
             btn_Prev.TabIndex = 5;
             btn_Prev.Text = "上一页";
             btn_Prev.UseVisualStyleBackColor = true;
@@ -221,9 +228,10 @@
             // 
             lbl_PageInfo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lbl_PageInfo.AutoSize = true;
-            lbl_PageInfo.Location = new Point(390, 448);
+            lbl_PageInfo.Location = new Point(618, 689);
+            lbl_PageInfo.Margin = new Padding(5, 0, 5, 0);
             lbl_PageInfo.Name = "lbl_PageInfo";
-            lbl_PageInfo.Size = new Size(59, 17);
+            lbl_PageInfo.Size = new Size(86, 24);
             lbl_PageInfo.TabIndex = 6;
             lbl_PageInfo.Text = "第 1/1 页";
             lbl_PageInfo.Click += lbl_PageInfo_Click;
@@ -231,9 +239,10 @@
             // btn_Next
             // 
             btn_Next.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_Next.Location = new Point(452, 443);
+            btn_Next.Location = new Point(715, 682);
+            btn_Next.Margin = new Padding(5, 4, 5, 4);
             btn_Next.Name = "btn_Next";
-            btn_Next.Size = new Size(65, 25);
+            btn_Next.Size = new Size(102, 35);
             btn_Next.TabIndex = 7;
             btn_Next.Text = "下一页";
             btn_Next.UseVisualStyleBackColor = true;
@@ -243,9 +252,10 @@
             // 
             btn_ViewDetail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btn_ViewDetail.BackColor = SystemColors.ActiveCaption;
-            btn_ViewDetail.Location = new Point(216, 441);
+            btn_ViewDetail.Location = new Point(344, 680);
+            btn_ViewDetail.Margin = new Padding(5, 4, 5, 4);
             btn_ViewDetail.Name = "btn_ViewDetail";
-            btn_ViewDetail.Size = new Size(100, 30);
+            btn_ViewDetail.Size = new Size(157, 42);
             btn_ViewDetail.TabIndex = 8;
             btn_ViewDetail.Text = "查看详情";
             btn_ViewDetail.UseVisualStyleBackColor = false;
@@ -261,22 +271,22 @@
             pnl_SearchBar.Controls.Add(lbl_Search);
             pnl_SearchBar.Dock = DockStyle.Top;
             pnl_SearchBar.Location = new Point(0, 0);
-            pnl_SearchBar.Margin = new Padding(2);
             pnl_SearchBar.Name = "pnl_SearchBar";
-            pnl_SearchBar.Size = new Size(533, 74);
+            pnl_SearchBar.Size = new Size(838, 104);
             pnl_SearchBar.TabIndex = 11;
             // 
             // FrmGoodslist
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(533, 527);
+            ClientSize = new Size(838, 744);
             Controls.Add(btn_ViewDetail);
             Controls.Add(btn_Next);
             Controls.Add(lbl_PageInfo);
             Controls.Add(btn_Prev);
             Controls.Add(dgv_Goods);
             Controls.Add(pnl_SearchBar);
+            Margin = new Padding(5, 4, 5, 4);
             Name = "FrmGoodslist";
             Text = "Form1";
             Load += FrmGoodslist_Load;
