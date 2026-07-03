@@ -18,12 +18,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmadmin));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             tabAdmin = new TabControl();
             tpGoodsAudit = new TabPage();
             btn_Reject = new Button();
@@ -32,12 +32,6 @@
             cbo_FilterStatus = new ComboBox();
             lbl_Filter = new Label();
             dgv_GoodsAudit = new DataGridView();
-            col_audit_id = new DataGridViewTextBoxColumn();
-            col_audit_title = new DataGridViewTextBoxColumn();
-            col_audit_price = new DataGridViewTextBoxColumn();
-            col_audit_seller = new DataGridViewTextBoxColumn();
-            col_audit_status = new DataGridViewTextBoxColumn();
-            col_audit_time = new DataGridViewTextBoxColumn();
             tpUserManage = new TabPage();
             txt_SearchUser = new TextBox();
             dgv_Users = new DataGridView();
@@ -96,10 +90,10 @@
             tabAdmin.Controls.Add(tpStats);
             tabAdmin.Dock = DockStyle.Fill;
             tabAdmin.Location = new Point(0, 0);
-            tabAdmin.Margin = new Padding(1, 1, 1, 1);
+            tabAdmin.Margin = new Padding(2, 1, 2, 1);
             tabAdmin.Name = "tabAdmin";
             tabAdmin.SelectedIndex = 0;
-            tabAdmin.Size = new Size(536, 527);
+            tabAdmin.Size = new Size(842, 744);
             tabAdmin.TabIndex = 6;
             // 
             // tpGoodsAudit
@@ -112,11 +106,11 @@
             tpGoodsAudit.Controls.Add(cbo_FilterStatus);
             tpGoodsAudit.Controls.Add(lbl_Filter);
             tpGoodsAudit.Controls.Add(dgv_GoodsAudit);
-            tpGoodsAudit.Location = new Point(4, 26);
-            tpGoodsAudit.Margin = new Padding(1, 1, 1, 1);
+            tpGoodsAudit.Location = new Point(4, 33);
+            tpGoodsAudit.Margin = new Padding(2, 1, 2, 1);
             tpGoodsAudit.Name = "tpGoodsAudit";
-            tpGoodsAudit.Padding = new Padding(1, 1, 1, 1);
-            tpGoodsAudit.Size = new Size(528, 497);
+            tpGoodsAudit.Padding = new Padding(2, 1, 2, 1);
+            tpGoodsAudit.Size = new Size(834, 707);
             tpGoodsAudit.TabIndex = 0;
             tpGoodsAudit.Text = "商品审核";
             tpGoodsAudit.UseVisualStyleBackColor = true;
@@ -124,10 +118,10 @@
             // btn_Reject
             // 
             btn_Reject.ForeColor = Color.Red;
-            btn_Reject.Location = new Point(333, 307);
-            btn_Reject.Margin = new Padding(1, 1, 1, 1);
+            btn_Reject.Location = new Point(523, 433);
+            btn_Reject.Margin = new Padding(2, 1, 2, 1);
             btn_Reject.Name = "btn_Reject";
-            btn_Reject.Size = new Size(65, 24);
+            btn_Reject.Size = new Size(102, 34);
             btn_Reject.TabIndex = 8;
             btn_Reject.Text = "拒绝";
             btn_Reject.UseVisualStyleBackColor = true;
@@ -136,10 +130,10 @@
             // btn_Approve
             // 
             btn_Approve.BackColor = Color.LightGreen;
-            btn_Approve.Location = new Point(132, 307);
-            btn_Approve.Margin = new Padding(1, 1, 1, 1);
+            btn_Approve.Location = new Point(207, 433);
+            btn_Approve.Margin = new Padding(2, 1, 2, 1);
             btn_Approve.Name = "btn_Approve";
-            btn_Approve.Size = new Size(65, 24);
+            btn_Approve.Size = new Size(102, 34);
             btn_Approve.TabIndex = 7;
             btn_Approve.Text = "审核通过";
             btn_Approve.UseVisualStyleBackColor = false;
@@ -147,10 +141,10 @@
             // 
             // btn_Refresh
             // 
-            btn_Refresh.Location = new Point(319, 43);
-            btn_Refresh.Margin = new Padding(1, 1, 1, 1);
+            btn_Refresh.Location = new Point(501, 61);
+            btn_Refresh.Margin = new Padding(2, 1, 2, 1);
             btn_Refresh.Name = "btn_Refresh";
-            btn_Refresh.Size = new Size(40, 23);
+            btn_Refresh.Size = new Size(63, 32);
             btn_Refresh.TabIndex = 6;
             btn_Refresh.Text = "刷新";
             btn_Refresh.UseVisualStyleBackColor = true;
@@ -160,10 +154,10 @@
             // 
             cbo_FilterStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cbo_FilterStatus.FormattingEnabled = true;
-            cbo_FilterStatus.Location = new Point(210, 41);
-            cbo_FilterStatus.Margin = new Padding(1, 1, 1, 1);
+            cbo_FilterStatus.Location = new Point(330, 58);
+            cbo_FilterStatus.Margin = new Padding(2, 1, 2, 1);
             cbo_FilterStatus.Name = "cbo_FilterStatus";
-            cbo_FilterStatus.Size = new Size(106, 25);
+            cbo_FilterStatus.Size = new Size(164, 32);
             cbo_FilterStatus.TabIndex = 5;
             cbo_FilterStatus.SelectedIndexChanged += cbo_FilterStatus_SelectedIndexChanged;
             // 
@@ -171,88 +165,43 @@
             // 
             lbl_Filter.AutoSize = true;
             lbl_Filter.BackColor = Color.Transparent;
-            lbl_Filter.Location = new Point(172, 46);
-            lbl_Filter.Margin = new Padding(2, 0, 2, 0);
+            lbl_Filter.Location = new Point(270, 65);
             lbl_Filter.Name = "lbl_Filter";
-            lbl_Filter.Size = new Size(44, 17);
+            lbl_Filter.Size = new Size(64, 24);
             lbl_Filter.TabIndex = 4;
             lbl_Filter.Text = "状态：";
             // 
             // dgv_GoodsAudit
             // 
             dgv_GoodsAudit.AllowUserToAddRows = false;
-            dgv_GoodsAudit.AutoGenerateColumns = false;
             dgv_GoodsAudit.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_GoodsAudit.BackgroundColor = Color.LightBlue;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv_GoodsAudit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = SystemColors.Control;
+            dataGridViewCellStyle19.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle19.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.True;
+            dgv_GoodsAudit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             dgv_GoodsAudit.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgv_GoodsAudit.DefaultCellStyle = dataGridViewCellStyle2;
-            dgv_GoodsAudit.Location = new Point(0, 70);
-            dgv_GoodsAudit.Margin = new Padding(1, 1, 1, 1);
+            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = SystemColors.Window;
+            dataGridViewCellStyle20.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle20.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
+            dgv_GoodsAudit.DefaultCellStyle = dataGridViewCellStyle20;
+            dgv_GoodsAudit.Location = new Point(0, 99);
+            dgv_GoodsAudit.Margin = new Padding(2, 1, 2, 1);
             dgv_GoodsAudit.MultiSelect = false;
             dgv_GoodsAudit.Name = "dgv_GoodsAudit";
             dgv_GoodsAudit.ReadOnly = true;
             dgv_GoodsAudit.RowHeadersWidth = 72;
             dgv_GoodsAudit.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_GoodsAudit.Size = new Size(543, 226);
+            dgv_GoodsAudit.Size = new Size(853, 319);
             dgv_GoodsAudit.TabIndex = 1;
-            dgv_GoodsAudit.Columns.AddRange(new DataGridViewColumn[] { col_audit_id, col_audit_title, col_audit_price, col_audit_seller, col_audit_status, col_audit_time });
-            // 
-            // col_audit_id
-            // 
-            col_audit_id.DataPropertyName = "goods_id";
-            col_audit_id.HeaderText = "ID";
-            col_audit_id.Width = 60;
-            col_audit_id.ReadOnly = true;
-            // 
-            // col_audit_title
-            // 
-            col_audit_title.DataPropertyName = "title";
-            col_audit_title.HeaderText = "商品名";
-            col_audit_title.FillWeight = 80;
-            col_audit_title.ReadOnly = true;
-            // 
-            // col_audit_price
-            // 
-            col_audit_price.DataPropertyName = "price";
-            col_audit_price.HeaderText = "价格";
-            col_audit_price.Width = 80;
-            col_audit_price.ReadOnly = true;
-            // 
-            // col_audit_seller
-            // 
-            col_audit_seller.DataPropertyName = "seller_name";
-            col_audit_seller.HeaderText = "卖家";
-            col_audit_seller.Width = 100;
-            col_audit_seller.ReadOnly = true;
-            // 
-            // col_audit_status
-            // 
-            col_audit_status.DataPropertyName = "status";
-            col_audit_status.HeaderText = "状态";
-            col_audit_status.Width = 80;
-            col_audit_status.ReadOnly = true;
-            // 
-            // col_audit_time
-            // 
-            col_audit_time.DataPropertyName = "created_time";
-            col_audit_time.HeaderText = "发布时间";
-            col_audit_time.FillWeight = 120;
-            col_audit_time.ReadOnly = true;
             // 
             // tpUserManage
             // 
@@ -263,21 +212,21 @@
             tpUserManage.Controls.Add(label1);
             tpUserManage.Controls.Add(btn_DisableUser);
             tpUserManage.Controls.Add(btn_SearchUser);
-            tpUserManage.Location = new Point(4, 26);
-            tpUserManage.Margin = new Padding(1, 1, 1, 1);
+            tpUserManage.Location = new Point(4, 33);
+            tpUserManage.Margin = new Padding(2, 1, 2, 1);
             tpUserManage.Name = "tpUserManage";
-            tpUserManage.Padding = new Padding(1, 1, 1, 1);
-            tpUserManage.Size = new Size(528, 497);
+            tpUserManage.Padding = new Padding(2, 1, 2, 1);
+            tpUserManage.Size = new Size(834, 707);
             tpUserManage.TabIndex = 1;
             tpUserManage.Text = "用户管理";
             tpUserManage.UseVisualStyleBackColor = true;
             // 
             // txt_SearchUser
             // 
-            txt_SearchUser.Location = new Point(230, 52);
-            txt_SearchUser.Margin = new Padding(1, 1, 1, 1);
+            txt_SearchUser.Location = new Point(361, 73);
+            txt_SearchUser.Margin = new Padding(2, 1, 2, 1);
             txt_SearchUser.Name = "txt_SearchUser";
-            txt_SearchUser.Size = new Size(126, 23);
+            txt_SearchUser.Size = new Size(196, 30);
             txt_SearchUser.TabIndex = 4;
             // 
             // dgv_Users
@@ -285,31 +234,31 @@
             dgv_Users.AllowUserToAddRows = false;
             dgv_Users.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_Users.BackgroundColor = Color.LightBlue;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = SystemColors.Control;
+            dataGridViewCellStyle21.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle21.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.True;
+            dgv_Users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             dgv_Users.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Users.Columns.AddRange(new DataGridViewColumn[] { col_user_id, col_username, col_phone, col_role_name, col_user_status, col_created_time });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgv_Users.DefaultCellStyle = dataGridViewCellStyle4;
-            dgv_Users.Location = new Point(0, 79);
-            dgv_Users.Margin = new Padding(1, 1, 1, 1);
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = SystemColors.Window;
+            dataGridViewCellStyle22.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle22.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.False;
+            dgv_Users.DefaultCellStyle = dataGridViewCellStyle22;
+            dgv_Users.Location = new Point(0, 112);
+            dgv_Users.Margin = new Padding(2, 1, 2, 1);
             dgv_Users.Name = "dgv_Users";
             dgv_Users.ReadOnly = true;
             dgv_Users.RowHeadersWidth = 72;
             dgv_Users.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Users.Size = new Size(546, 189);
+            dgv_Users.Size = new Size(858, 308);
             dgv_Users.TabIndex = 3;
             dgv_Users.CellContentClick += dgv_Users_CellContentClick;
             // 
@@ -364,19 +313,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(194, 55);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(305, 78);
             label1.Name = "label1";
-            label1.Size = new Size(44, 17);
+            label1.Size = new Size(64, 24);
             label1.TabIndex = 2;
             label1.Text = "搜索：";
             // 
             // btn_DisableUser
             // 
-            btn_DisableUser.Location = new Point(243, 272);
-            btn_DisableUser.Margin = new Padding(1, 1, 1, 1);
+            btn_DisableUser.Location = new Point(342, 422);
+            btn_DisableUser.Margin = new Padding(2, 1, 2, 1);
             btn_DisableUser.Name = "btn_DisableUser";
-            btn_DisableUser.Size = new Size(96, 34);
+            btn_DisableUser.Size = new Size(151, 48);
             btn_DisableUser.TabIndex = 1;
             btn_DisableUser.Text = "禁用/解禁";
             btn_DisableUser.UseVisualStyleBackColor = true;
@@ -384,10 +332,10 @@
             // 
             // btn_SearchUser
             // 
-            btn_SearchUser.Location = new Point(370, 51);
-            btn_SearchUser.Margin = new Padding(1, 1, 1, 1);
+            btn_SearchUser.Location = new Point(581, 72);
+            btn_SearchUser.Margin = new Padding(2, 1, 2, 1);
             btn_SearchUser.Name = "btn_SearchUser";
-            btn_SearchUser.Size = new Size(43, 24);
+            btn_SearchUser.Size = new Size(68, 34);
             btn_SearchUser.TabIndex = 0;
             btn_SearchUser.Text = "搜索";
             btn_SearchUser.UseVisualStyleBackColor = true;
@@ -402,11 +350,11 @@
             tpOrderManage.Controls.Add(cbo_FilterOrder);
             tpOrderManage.Controls.Add(btn_MarkComplete);
             tpOrderManage.Controls.Add(btn_RefreshOrder);
-            tpOrderManage.Location = new Point(4, 26);
-            tpOrderManage.Margin = new Padding(1, 1, 1, 1);
+            tpOrderManage.Location = new Point(4, 33);
+            tpOrderManage.Margin = new Padding(2, 1, 2, 1);
             tpOrderManage.Name = "tpOrderManage";
-            tpOrderManage.Padding = new Padding(1, 1, 1, 1);
-            tpOrderManage.Size = new Size(528, 497);
+            tpOrderManage.Padding = new Padding(2, 1, 2, 1);
+            tpOrderManage.Size = new Size(834, 707);
             tpOrderManage.TabIndex = 2;
             tpOrderManage.Text = "订单纠纷处理";
             tpOrderManage.UseVisualStyleBackColor = true;
@@ -414,10 +362,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(161, 54);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(253, 76);
             label2.Name = "label2";
-            label2.Size = new Size(44, 17);
+            label2.Size = new Size(64, 24);
             label2.TabIndex = 4;
             label2.Text = "状态：";
             // 
@@ -426,31 +373,31 @@
             dgv_AllOrders.AllowUserToAddRows = false;
             dgv_AllOrders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_AllOrders.BackgroundColor = Color.LightBlue;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgv_AllOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = SystemColors.Control;
+            dataGridViewCellStyle23.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle23.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.True;
+            dgv_AllOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             dgv_AllOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_AllOrders.Columns.AddRange(new DataGridViewColumn[] { col_order_id, col_goods_title, col_buyer_name, col_seller_name, col_goods_price, col_order_status, col_order_time, col_complete_time });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Microsoft YaHei UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgv_AllOrders.DefaultCellStyle = dataGridViewCellStyle6;
-            dgv_AllOrders.Location = new Point(2, 88);
-            dgv_AllOrders.Margin = new Padding(1, 1, 1, 1);
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = SystemColors.Window;
+            dataGridViewCellStyle24.Font = new Font("Microsoft YaHei UI", 9F);
+            dataGridViewCellStyle24.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.False;
+            dgv_AllOrders.DefaultCellStyle = dataGridViewCellStyle24;
+            dgv_AllOrders.Location = new Point(3, 124);
+            dgv_AllOrders.Margin = new Padding(2, 1, 2, 1);
             dgv_AllOrders.Name = "dgv_AllOrders";
             dgv_AllOrders.ReadOnly = true;
             dgv_AllOrders.RowHeadersWidth = 72;
             dgv_AllOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_AllOrders.Size = new Size(545, 183);
+            dgv_AllOrders.Size = new Size(856, 337);
             dgv_AllOrders.TabIndex = 3;
             // 
             // col_order_id
@@ -520,19 +467,19 @@
             // cbo_FilterOrder
             // 
             cbo_FilterOrder.FormattingEnabled = true;
-            cbo_FilterOrder.Location = new Point(209, 50);
-            cbo_FilterOrder.Margin = new Padding(1, 1, 1, 1);
+            cbo_FilterOrder.Location = new Point(328, 71);
+            cbo_FilterOrder.Margin = new Padding(2, 1, 2, 1);
             cbo_FilterOrder.Name = "cbo_FilterOrder";
-            cbo_FilterOrder.Size = new Size(127, 25);
+            cbo_FilterOrder.Size = new Size(197, 32);
             cbo_FilterOrder.TabIndex = 2;
             cbo_FilterOrder.SelectedIndexChanged += cbo_FilterOrder_SelectedIndexChanged;
             // 
             // btn_MarkComplete
             // 
-            btn_MarkComplete.Location = new Point(247, 275);
-            btn_MarkComplete.Margin = new Padding(1, 1, 1, 1);
+            btn_MarkComplete.Location = new Point(347, 477);
+            btn_MarkComplete.Margin = new Padding(2, 1, 2, 1);
             btn_MarkComplete.Name = "btn_MarkComplete";
-            btn_MarkComplete.Size = new Size(89, 24);
+            btn_MarkComplete.Size = new Size(140, 34);
             btn_MarkComplete.TabIndex = 1;
             btn_MarkComplete.Text = "标记为已完成";
             btn_MarkComplete.UseVisualStyleBackColor = true;
@@ -540,10 +487,10 @@
             // 
             // btn_RefreshOrder
             // 
-            btn_RefreshOrder.Location = new Point(340, 50);
-            btn_RefreshOrder.Margin = new Padding(1, 1, 1, 1);
+            btn_RefreshOrder.Location = new Point(534, 71);
+            btn_RefreshOrder.Margin = new Padding(2, 1, 2, 1);
             btn_RefreshOrder.Name = "btn_RefreshOrder";
-            btn_RefreshOrder.Size = new Size(92, 24);
+            btn_RefreshOrder.Size = new Size(145, 34);
             btn_RefreshOrder.TabIndex = 0;
             btn_RefreshOrder.Text = "刷新";
             btn_RefreshOrder.UseVisualStyleBackColor = true;
@@ -557,11 +504,11 @@
             tpStats.Controls.Add(btn_SaveAnnouncement);
             tpStats.Controls.Add(grp_Stats);
             tpStats.Controls.Add(btn_RefreshStats);
-            tpStats.Location = new Point(4, 26);
-            tpStats.Margin = new Padding(1, 1, 1, 1);
+            tpStats.Location = new Point(4, 33);
+            tpStats.Margin = new Padding(2, 1, 2, 1);
             tpStats.Name = "tpStats";
-            tpStats.Padding = new Padding(1, 1, 1, 1);
-            tpStats.Size = new Size(528, 497);
+            tpStats.Padding = new Padding(2, 1, 2, 1);
+            tpStats.Size = new Size(834, 707);
             tpStats.TabIndex = 3;
             tpStats.Text = "数据统计";
             tpStats.UseVisualStyleBackColor = true;
@@ -569,20 +516,20 @@
             // txt_Announcement
             // 
             txt_Announcement.BackColor = Color.Beige;
-            txt_Announcement.Location = new Point(74, 263);
-            txt_Announcement.Margin = new Padding(1, 1, 1, 1);
+            txt_Announcement.Location = new Point(66, 376);
+            txt_Announcement.Margin = new Padding(2, 1, 2, 1);
             txt_Announcement.Multiline = true;
             txt_Announcement.Name = "txt_Announcement";
-            txt_Announcement.Size = new Size(384, 124);
+            txt_Announcement.Size = new Size(703, 208);
             txt_Announcement.TabIndex = 3;
             txt_Announcement.TextChanged += txt_Announcement_TextChanged;
             // 
             // btn_SaveAnnouncement
             // 
-            btn_SaveAnnouncement.Location = new Point(218, 405);
-            btn_SaveAnnouncement.Margin = new Padding(1, 1, 1, 1);
+            btn_SaveAnnouncement.Location = new Point(363, 609);
+            btn_SaveAnnouncement.Margin = new Padding(2, 1, 2, 1);
             btn_SaveAnnouncement.Name = "btn_SaveAnnouncement";
-            btn_SaveAnnouncement.Size = new Size(71, 27);
+            btn_SaveAnnouncement.Size = new Size(112, 38);
             btn_SaveAnnouncement.TabIndex = 2;
             btn_SaveAnnouncement.Text = "发布公告";
             btn_SaveAnnouncement.UseVisualStyleBackColor = true;
@@ -599,11 +546,11 @@
             grp_Stats.Controls.Add(lbl_GoodsCount);
             grp_Stats.Controls.Add(lbl_AdminCount);
             grp_Stats.Controls.Add(lbl_UserCount);
-            grp_Stats.Location = new Point(74, 54);
-            grp_Stats.Margin = new Padding(1, 1, 1, 1);
+            grp_Stats.Location = new Point(66, 60);
+            grp_Stats.Margin = new Padding(2, 1, 2, 1);
             grp_Stats.Name = "grp_Stats";
-            grp_Stats.Padding = new Padding(1, 1, 1, 1);
-            grp_Stats.Size = new Size(382, 157);
+            grp_Stats.Padding = new Padding(2, 1, 2, 1);
+            grp_Stats.Size = new Size(703, 238);
             grp_Stats.TabIndex = 1;
             grp_Stats.TabStop = false;
             grp_Stats.Text = "数据统计";
@@ -611,89 +558,81 @@
             // lbl_CompletedCount
             // 
             lbl_CompletedCount.AutoSize = true;
-            lbl_CompletedCount.Location = new Point(205, 125);
-            lbl_CompletedCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_CompletedCount.Location = new Point(322, 176);
             lbl_CompletedCount.Name = "lbl_CompletedCount";
-            lbl_CompletedCount.Size = new Size(90, 17);
+            lbl_CompletedCount.Size = new Size(134, 24);
             lbl_CompletedCount.TabIndex = 7;
             lbl_CompletedCount.Text = "已完成订单：--";
             // 
             // lbl_ShippingCount
             // 
             lbl_ShippingCount.AutoSize = true;
-            lbl_ShippingCount.Location = new Point(205, 94);
-            lbl_ShippingCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_ShippingCount.Location = new Point(322, 133);
             lbl_ShippingCount.Name = "lbl_ShippingCount";
-            lbl_ShippingCount.Size = new Size(90, 17);
+            lbl_ShippingCount.Size = new Size(134, 24);
             lbl_ShippingCount.TabIndex = 6;
             lbl_ShippingCount.Text = "待收货订单：--";
             // 
             // lbl_OrderCount
             // 
             lbl_OrderCount.AutoSize = true;
-            lbl_OrderCount.Location = new Point(205, 60);
-            lbl_OrderCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_OrderCount.Location = new Point(322, 85);
             lbl_OrderCount.Name = "lbl_OrderCount";
-            lbl_OrderCount.Size = new Size(78, 17);
+            lbl_OrderCount.Size = new Size(116, 24);
             lbl_OrderCount.TabIndex = 5;
             lbl_OrderCount.Text = "订单总数：--";
             // 
             // lbl_PendingCount
             // 
             lbl_PendingCount.AutoSize = true;
-            lbl_PendingCount.Location = new Point(204, 28);
-            lbl_PendingCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_PendingCount.Location = new Point(321, 40);
             lbl_PendingCount.Name = "lbl_PendingCount";
-            lbl_PendingCount.Size = new Size(90, 17);
+            lbl_PendingCount.Size = new Size(134, 24);
             lbl_PendingCount.TabIndex = 4;
             lbl_PendingCount.Text = "待审核商品：--";
             // 
             // lbl_OnSaleCount
             // 
             lbl_OnSaleCount.AutoSize = true;
-            lbl_OnSaleCount.Location = new Point(15, 125);
-            lbl_OnSaleCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_OnSaleCount.Location = new Point(24, 176);
             lbl_OnSaleCount.Name = "lbl_OnSaleCount";
-            lbl_OnSaleCount.Size = new Size(78, 17);
+            lbl_OnSaleCount.Size = new Size(116, 24);
             lbl_OnSaleCount.TabIndex = 3;
             lbl_OnSaleCount.Text = "在售商品：--";
             // 
             // lbl_GoodsCount
             // 
             lbl_GoodsCount.AutoSize = true;
-            lbl_GoodsCount.Location = new Point(15, 94);
-            lbl_GoodsCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_GoodsCount.Location = new Point(24, 133);
             lbl_GoodsCount.Name = "lbl_GoodsCount";
-            lbl_GoodsCount.Size = new Size(78, 17);
+            lbl_GoodsCount.Size = new Size(116, 24);
             lbl_GoodsCount.TabIndex = 2;
             lbl_GoodsCount.Text = "商品总数：--";
             // 
             // lbl_AdminCount
             // 
             lbl_AdminCount.AutoSize = true;
-            lbl_AdminCount.Location = new Point(15, 60);
-            lbl_AdminCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_AdminCount.Location = new Point(24, 85);
             lbl_AdminCount.Name = "lbl_AdminCount";
-            lbl_AdminCount.Size = new Size(78, 17);
+            lbl_AdminCount.Size = new Size(116, 24);
             lbl_AdminCount.TabIndex = 1;
             lbl_AdminCount.Text = "管理员数：--";
             // 
             // lbl_UserCount
             // 
             lbl_UserCount.AutoSize = true;
-            lbl_UserCount.Location = new Point(15, 30);
-            lbl_UserCount.Margin = new Padding(2, 0, 2, 0);
+            lbl_UserCount.Location = new Point(24, 42);
             lbl_UserCount.Name = "lbl_UserCount";
-            lbl_UserCount.Size = new Size(90, 17);
+            lbl_UserCount.Size = new Size(134, 24);
             lbl_UserCount.TabIndex = 0;
             lbl_UserCount.Text = "注册用户数：--";
             // 
             // btn_RefreshStats
             // 
-            btn_RefreshStats.Location = new Point(218, 225);
-            btn_RefreshStats.Margin = new Padding(1, 1, 1, 1);
+            btn_RefreshStats.Location = new Point(359, 318);
+            btn_RefreshStats.Margin = new Padding(2, 1, 2, 1);
             btn_RefreshStats.Name = "btn_RefreshStats";
-            btn_RefreshStats.Size = new Size(71, 24);
+            btn_RefreshStats.Size = new Size(112, 34);
             btn_RefreshStats.TabIndex = 0;
             btn_RefreshStats.Text = "刷新统计";
             btn_RefreshStats.UseVisualStyleBackColor = true;
@@ -701,13 +640,13 @@
             // 
             // Frmadmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(536, 527);
+            ClientSize = new Size(842, 744);
             Controls.Add(tabAdmin);
             DoubleBuffered = true;
-            Margin = new Padding(1, 1, 1, 1);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "Frmadmin";
             Text = "管理员面板";
             Load += Frmadmin_Load;

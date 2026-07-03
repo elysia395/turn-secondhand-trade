@@ -39,12 +39,12 @@ namespace 转一转校园二手物品交易系统
             Label lbl = new Label
             {
                 Text = text,
-                Dock = DockStyle.Fill,
-                TextAlign = ContentAlignment.MiddleCenter,
+                AutoSize = true,
+                MaximumSize = new Size(750, 0),
+                TextAlign = ContentAlignment.TopLeft,
                 Font = new Font("微软雅黑", 12, FontStyle.Bold),
                 ForeColor = Color.FromArgb(70, 130, 180),
                 BackColor = Color.Transparent,
-                AutoSize = false,
             };
 
             panel1.Controls.Add(lbl);

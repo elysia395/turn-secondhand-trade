@@ -105,7 +105,7 @@
             // btn_Order
             // 
             btn_Order.BackColor = SystemColors.ActiveCaption;
-            btn_Order.Location = new Point(369, 596);
+            btn_Order.Location = new Point(327, 596);
             btn_Order.Margin = new Padding(5, 4, 5, 4);
             btn_Order.Name = "btn_Order";
             btn_Order.Size = new Size(189, 49);
