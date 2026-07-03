@@ -17,7 +17,6 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmadmin));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -104,7 +103,6 @@
             // 
             // tpGoodsAudit
             // 
-            tpGoodsAudit.BackgroundImage = (Image)resources.GetObject("tpGoodsAudit.BackgroundImage");
             tpGoodsAudit.BackgroundImageLayout = ImageLayout.Stretch;
             tpGoodsAudit.Controls.Add(btn_Reject);
             tpGoodsAudit.Controls.Add(btn_Approve);
@@ -216,6 +214,7 @@
             // 
             col_audit_id.DataPropertyName = "goods_id";
             col_audit_id.HeaderText = "ID";
+            col_audit_id.Name = "col_audit_id";
             col_audit_id.Width = 60;
             col_audit_id.ReadOnly = true;
             // 
@@ -244,6 +243,7 @@
             // 
             col_audit_status.DataPropertyName = "status";
             col_audit_status.HeaderText = "状态";
+            col_audit_status.Name = "col_audit_status";
             col_audit_status.Width = 80;
             col_audit_status.ReadOnly = true;
             // 
@@ -256,7 +256,6 @@
             // 
             // tpUserManage
             // 
-            tpUserManage.BackgroundImage = (Image)resources.GetObject("tpUserManage.BackgroundImage");
             tpUserManage.BackgroundImageLayout = ImageLayout.Stretch;
             tpUserManage.Controls.Add(txt_SearchUser);
             tpUserManage.Controls.Add(dgv_Users);
@@ -395,7 +394,6 @@
             // 
             // tpOrderManage
             // 
-            tpOrderManage.BackgroundImage = (Image)resources.GetObject("tpOrderManage.BackgroundImage");
             tpOrderManage.BackgroundImageLayout = ImageLayout.Stretch;
             tpOrderManage.Controls.Add(label2);
             tpOrderManage.Controls.Add(dgv_AllOrders);
@@ -551,7 +549,6 @@
             // 
             // tpStats
             // 
-            tpStats.BackgroundImage = (Image)resources.GetObject("tpStats.BackgroundImage");
             tpStats.BackgroundImageLayout = ImageLayout.Stretch;
             tpStats.Controls.Add(txt_Announcement);
             tpStats.Controls.Add(btn_SaveAnnouncement);

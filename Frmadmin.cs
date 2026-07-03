@@ -12,6 +12,12 @@ namespace 转一转校园二手物品交易系统
                      ControlStyles.DoubleBuffer |
                      ControlStyles.OptimizedDoubleBuffer, true);
             InitializeComponent();
+
+            string bg = Path.Combine(Application.StartupPath, "Sys_images", Program.BackgroundDir);
+            tpGoodsAudit.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_goods.png"));
+            tpUserManage.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_users.png"));
+            tpOrderManage.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_orders.png"));
+            tpStats.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_stats.png"));
         }
 
         protected override CreateParams CreateParams
@@ -114,7 +120,7 @@ ORDER BY g.created_time DESC";
                 return;
             }
 
-            string currentStatus = dgv_GoodsAudit.CurrentRow.Cells["status"].Value?.ToString() ?? "";
+            string currentStatus = dgv_GoodsAudit.CurrentRow.Cells["col_audit_status"].Value?.ToString() ?? "";
             if (currentStatus != "待审核")
             {
                 ShowError("该商品无需审核");
@@ -124,7 +130,7 @@ ORDER BY g.created_time DESC";
             if (!ShowConfirm($"确认要将该商品状态改为「{newStatus}」吗？"))
                 return;
 
-            int id = Convert.ToInt32(dgv_GoodsAudit.CurrentRow.Cells["goods_id"].Value);
+            int id = Convert.ToInt32(dgv_GoodsAudit.CurrentRow.Cells["col_audit_id"].Value);
 
             string sql = @"UPDATE goods 
 SET status=@s, audit_admin_id=@aid, audit_time=GETDATE()
