@@ -33,7 +33,7 @@ namespace 转一转校园二手物品交易系统
             DataTable dt = SQLHelper.Query(sql);
 
             string text = dt.Rows.Count > 0 && dt.Rows[0]["content"] != DBNull.Value
-                ? "📢 " + dt.Rows[0]["content"].ToString()
+                ? "📢 " + dt.Rows[0]["content"].ToString().Replace("\\n", Environment.NewLine)
                 : "暂无公告";
 
             Label lbl = new Label
