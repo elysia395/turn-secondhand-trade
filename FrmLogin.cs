@@ -8,7 +8,7 @@ namespace 转一转校园二手物品交易系统
         public FrmLogin()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Sys_images", "Backgrounds", "background_login.png"));
+            this.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Sys_images", Program.BackgroundDir, "background_login.png"));
         }
 
         private void BtnLoginClick(object sender, EventArgs e)

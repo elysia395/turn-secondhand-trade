@@ -30,3 +30,6 @@ AppSettings.secret.config
 /test_docx.docx
 *.docx
 /系统设计说明书.md
+
+## 临时图片
+商品暂存图/

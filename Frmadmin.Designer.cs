@@ -17,7 +17,6 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmadmin));
             DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
@@ -98,7 +97,6 @@
             // 
             // tpGoodsAudit
             // 
-            tpGoodsAudit.BackgroundImage = (Image)resources.GetObject("tpGoodsAudit.BackgroundImage");
             tpGoodsAudit.BackgroundImageLayout = ImageLayout.Stretch;
             tpGoodsAudit.Controls.Add(btn_Reject);
             tpGoodsAudit.Controls.Add(btn_Approve);
@@ -205,7 +203,6 @@
             // 
             // tpUserManage
             // 
-            tpUserManage.BackgroundImage = (Image)resources.GetObject("tpUserManage.BackgroundImage");
             tpUserManage.BackgroundImageLayout = ImageLayout.Stretch;
             tpUserManage.Controls.Add(txt_SearchUser);
             tpUserManage.Controls.Add(dgv_Users);
@@ -343,7 +340,6 @@
             // 
             // tpOrderManage
             // 
-            tpOrderManage.BackgroundImage = (Image)resources.GetObject("tpOrderManage.BackgroundImage");
             tpOrderManage.BackgroundImageLayout = ImageLayout.Stretch;
             tpOrderManage.Controls.Add(label2);
             tpOrderManage.Controls.Add(dgv_AllOrders);
@@ -498,7 +494,6 @@
             // 
             // tpStats
             // 
-            tpStats.BackgroundImage = (Image)resources.GetObject("tpStats.BackgroundImage");
             tpStats.BackgroundImageLayout = ImageLayout.Stretch;
             tpStats.Controls.Add(txt_Announcement);
             tpStats.Controls.Add(btn_SaveAnnouncement);

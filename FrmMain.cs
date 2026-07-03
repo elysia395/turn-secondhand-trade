@@ -11,7 +11,7 @@ namespace 转一转校园二手物品交易系统
         public FrmMain()
         {
             InitializeComponent();
-            string bgDir = Path.Combine(Application.StartupPath, "Sys_images", "Backgrounds");
+            string bgDir = Path.Combine(Application.StartupPath, "Sys_images", Program.BackgroundDir);
             pnl_Menu.BackgroundImage = Image.FromFile(Path.Combine(bgDir, "background_menu.png"));
             pnl_Content.BackgroundImage = Image.FromFile(Path.Combine(bgDir, "background_main.jpg"));
         }
@@ -33,7 +33,7 @@ namespace 转一转校园二手物品交易系统
             DataTable dt = SQLHelper.Query(sql);
 
             string text = dt.Rows.Count > 0 && dt.Rows[0]["content"] != DBNull.Value
-                ? "📢 " + dt.Rows[0]["content"].ToString()
+                ? "📢 " + dt.Rows[0]["content"].ToString().Replace("\\n", Environment.NewLine)
                 : "暂无公告";
 
             Label lbl = new Label

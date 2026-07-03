@@ -12,6 +12,12 @@ namespace 转一转校园二手物品交易系统
                      ControlStyles.DoubleBuffer |
                      ControlStyles.OptimizedDoubleBuffer, true);
             InitializeComponent();
+
+            string bg = Path.Combine(Application.StartupPath, "Sys_images", Program.BackgroundDir);
+            tpGoodsAudit.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_goods.png"));
+            tpUserManage.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_users.png"));
+            tpOrderManage.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_orders.png"));
+            tpStats.BackgroundImage = Image.FromFile(Path.Combine(bg, "background_admin_stats.png"));
         }
 
         protected override CreateParams CreateParams

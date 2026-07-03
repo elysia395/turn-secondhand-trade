@@ -258,4 +258,7 @@ REFERENCES [dbo].[roles] ([role_id])
 GO
 ALTER TABLE [dbo].[users] CHECK CONSTRAINT [FK__users__role_id__395884C4]
 GO
+ALTER TABLE [dbo].[announcements] WITH CHECK ADD CONSTRAINT [FK_announcements_creator] FOREIGN KEY([creator_id])
+REFERENCES [dbo].[users] ([user_id])
+GO
 
