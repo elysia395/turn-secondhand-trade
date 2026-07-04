@@ -4,14 +4,14 @@ GO
 
 USE [SecondHandDB]
 GO
-/****** 对象:  User [TeamUser]    脚本日期: 2026/6/26 10:20:34 ******/
+-- User: TeamUser
 CREATE USER [TeamUser] FOR LOGIN [TeamUser] WITH DEFAULT_SCHEMA=[dbo]
 GO
 ALTER ROLE [db_datareader] ADD MEMBER [TeamUser]
 GO
 ALTER ROLE [db_datawriter] ADD MEMBER [TeamUser]
 GO
-/****** 对象:  Table [dbo].[goods]    脚本日期: 2026/6/26 10:20:34 ******/
+-- Table goods
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -33,7 +33,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** 对象:  Table [dbo].[orders]    脚本日期: 2026/6/26 10:20:34 ******/
+-- Table orders
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -54,7 +54,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** 对象:  Table [dbo].[announcements]    脚本日期: 2026/6/26 10:20:34 ******/
+-- Table announcements
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -72,7 +72,7 @@ PRIMARY KEY CLUSTERED
 GO
 ALTER TABLE [dbo].[announcements] ADD DEFAULT (getdate()) FOR [created_time]
 GO
-/****** 对象:  Table [dbo].[users]    脚本日期: 2026/6/26 10:20:34 ******/
+-- Table users
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -93,7 +93,7 @@ CREATE TABLE [dbo].[users](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** 对象:  View [dbo].[订单详情视图]    脚本日期: 2026/6/26 10:20:34 ******/
+-- View order_detail
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ JOIN goods g ON o.goods_id = g.goods_id
 JOIN users buyer ON o.buyer_id = buyer.user_id
 JOIN users seller ON g.seller_id = seller.user_id;
 GO
-/****** 对象:  Table [dbo].[categories]    脚本日期: 2026/6/26 10:20:34 ******/
+-- Table categories
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -126,7 +126,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** 对象:  View [dbo].[v_OnSale_Goods]    脚本日期: 2026/6/26 10:20:34 ******/
+-- View v_OnSale_Goods
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -139,7 +139,7 @@ JOIN categories c ON g.category_id = c.category_id
 JOIN users u ON g.seller_id = u.user_id
 WHERE g.status = '在售';
 GO
-/****** 对象:  Table [dbo].[goods_images]    脚本日期: 2026/6/26 10:20:34 ******/
+-- Table goods_images
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -156,7 +156,7 @@ CREATE TABLE [dbo].[goods_images](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** 对象:  Table [dbo].[roles]    脚本日期: 2026/6/26 10:20:34 ******/
+-- Table roles
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -175,21 +175,15 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-GO
-GO
-GO
-GO
-GO
-GO
 SET ANSI_PADDING ON
 GO
-/****** 对象:  Index [UQ__categori__5189E255DFB43DBF]    脚本日期: 2026/6/26 10:20:34 ******/
+/****** 对象:  -- Index UQ_categories_name
 ALTER TABLE [dbo].[categories] ADD UNIQUE NONCLUSTERED 
 (
 	[category_name] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** 对象:  Index [UQ__orders__40BA22389D1ABE60]    脚本日期: 2026/6/26 10:20:34 ******/
+/****** 对象:  -- Index UQ_orders_goods_id
 ALTER TABLE [dbo].[orders] ADD UNIQUE NONCLUSTERED 
 (
 	[goods_id] ASC
@@ -197,7 +191,7 @@ ALTER TABLE [dbo].[orders] ADD UNIQUE NONCLUSTERED
 GO
 SET ANSI_PADDING ON
 GO
-/****** 对象:  Index [UQ__users__F3DBC5724A7EDBE9]    脚本日期: 2026/6/26 10:20:34 ******/
+/****** 对象:  -- Index UQ_users_username
 ALTER TABLE [dbo].[users] ADD  CONSTRAINT [UQ__users__F3DBC5724A7EDBE9] UNIQUE NONCLUSTERED 
 (
 	[username] ASC

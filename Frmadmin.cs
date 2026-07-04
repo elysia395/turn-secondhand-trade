@@ -102,6 +102,13 @@ ORDER BY g.created_time DESC";
             LoadGoods();
         }
 
+        private void dgv_GoodsAudit_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv_GoodsAudit.CurrentRow == null) return;
+            string status = dgv_GoodsAudit.CurrentRow.Cells["status"].Value?.ToString() ?? "";
+            btn_Reject.Text = status == "在售" ? "撤回审核" : "拒绝";
+        }
+
         private void btn_Approve_Click(object sender, EventArgs e)
         {
             ChangeStatus("在售", "商品已上架");
@@ -109,7 +116,20 @@ ORDER BY g.created_time DESC";
 
         private void btn_Reject_Click(object sender, EventArgs e)
         {
-            ChangeStatus("已拒绝", "商品已拒绝");
+            if (dgv_GoodsAudit.CurrentRow == null)
+            {
+                ShowError("请先选中一个商品");
+                return;
+            }
+
+            string status = dgv_GoodsAudit.CurrentRow.Cells["status"].Value?.ToString() ?? "";
+
+            if (status == "在售")
+                ChangeStatus("待审核", "已撤回审核，商品恢复为待审核状态");
+            else if (status == "待审核")
+                ChangeStatus("已拒绝", "商品已拒绝");
+            else
+                ShowError("该商品状态不支持此操作");
         }
 
         private void ChangeStatus(string newStatus, string msg)
@@ -117,13 +137,6 @@ ORDER BY g.created_time DESC";
             if (dgv_GoodsAudit.CurrentRow == null)
             {
                 ShowError("请先选中一个商品");
-                return;
-            }
-
-            string currentStatus = dgv_GoodsAudit.CurrentRow.Cells["status"].Value?.ToString() ?? "";
-            if (currentStatus != "待审核")
-            {
-                ShowError("该商品无需审核");
                 return;
             }
 
