@@ -200,6 +200,7 @@
             dgv_GoodsAudit.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_GoodsAudit.Size = new Size(853, 319);
             dgv_GoodsAudit.TabIndex = 1;
+            dgv_GoodsAudit.SelectionChanged += dgv_GoodsAudit_SelectionChanged;
             // 
             // tpUserManage
             // 

@@ -215,7 +215,7 @@
             // btn_Prev
             // 
             btn_Prev.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_Prev.Location = new Point(506, 682);
+            btn_Prev.Location = new Point(434, 691);
             btn_Prev.Margin = new Padding(5, 4, 5, 4);
             btn_Prev.Name = "btn_Prev";
             btn_Prev.Size = new Size(102, 35);
@@ -228,18 +228,18 @@
             // 
             lbl_PageInfo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lbl_PageInfo.AutoSize = true;
-            lbl_PageInfo.Location = new Point(618, 689);
+            lbl_PageInfo.Location = new Point(546, 696);
             lbl_PageInfo.Margin = new Padding(5, 0, 5, 0);
             lbl_PageInfo.Name = "lbl_PageInfo";
             lbl_PageInfo.Size = new Size(86, 24);
             lbl_PageInfo.TabIndex = 6;
-            lbl_PageInfo.Text = "第 1/1 页";
+            lbl_PageInfo.Text = "第 1/1 页\r\n";
             lbl_PageInfo.Click += lbl_PageInfo_Click;
             // 
             // btn_Next
             // 
             btn_Next.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_Next.Location = new Point(715, 682);
+            btn_Next.Location = new Point(715, 691);
             btn_Next.Margin = new Padding(5, 4, 5, 4);
             btn_Next.Name = "btn_Next";
             btn_Next.Size = new Size(102, 35);
@@ -252,7 +252,7 @@
             // 
             btn_ViewDetail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btn_ViewDetail.BackColor = SystemColors.ActiveCaption;
-            btn_ViewDetail.Location = new Point(344, 680);
+            btn_ViewDetail.Location = new Point(139, 687);
             btn_ViewDetail.Margin = new Padding(5, 4, 5, 4);
             btn_ViewDetail.Name = "btn_ViewDetail";
             btn_ViewDetail.Size = new Size(157, 42);

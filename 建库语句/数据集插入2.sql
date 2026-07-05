@@ -10,18 +10,18 @@ DBCC CHECKIDENT ('dbo.goods_images', RESEED, 29);
 DBCC CHECKIDENT ('dbo.goods', RESEED, 39);
 GO
 
--- 1. goods（9 件在售商品，依赖: seller_id → users, category_id → categories）
+-- 1. goods（9 件在售商品，审核人 goods_admin，依赖: seller_id → users, category_id → categories）
 SET IDENTITY_INSERT [dbo].[goods] ON 
 
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (30, N'宿舍遮光床帐', CAST(18.00 AS Decimal(10, 2)), N'毕业出，八成新附带挂钩，夏季防蚊', N'在售', CAST(N'2026-07-03T10:44:50.200' AS DateTime), 6, 3)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (31, N'户外驱蚊喷雾', CAST(12.00 AS Decimal(10, 2)), N'全新未拆，去年军训囤多了用不完', N'在售', CAST(N'2026-07-03T10:44:50.203' AS DateTime), 6, 7)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (32, N'羽毛球一桶（5支）', CAST(30.00 AS Decimal(10, 2)), N'九五新仅打过三次，送手胶两卷', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 7, 4)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (33, N'柠檬味气泡水（整箱）', CAST(20.00 AS Decimal(10, 2)), N'快递买多了一箱，未拆封', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 5, 6)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (34, N'运动手表', CAST(120.00 AS Decimal(10, 2)), N'用了半年，心率/计步/防水，换新出旧', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 1, 5)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (35, N'全新口红（豆沙色）', CAST(39.00 AS Decimal(10, 2)), N'朋友送的色号不合适，仅试色', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 4, 7)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (36, N'动漫手办摆件', CAST(2.50 AS Decimal(10, 2)), N'小黑子懂的都懂', N'在售', CAST(N'2026-07-03T10:44:50.210' AS DateTime), 5, 6)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (37, N'美术橡皮擦套装（4块）', CAST(8.00 AS Decimal(10, 2)), N'买多了出半套', N'在售', CAST(N'2026-07-03T10:44:50.210' AS DateTime), 3, 3)
-INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id]) VALUES (38, N'纯牛奶整箱（16盒）', CAST(35.00 AS Decimal(10, 2)), N'日期新鲜，囤太多喝不完', N'在售', CAST(N'2026-07-03T10:44:50.210' AS DateTime), 5, 4)
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (30, N'宿舍遮光床帐', CAST(18.00 AS Decimal(10, 2)), N'毕业出，八成新附带挂钩，夏季防蚊', N'在售', CAST(N'2026-07-03T10:44:50.200' AS DateTime), 6, 3, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (31, N'户外驱蚊喷雾', CAST(12.00 AS Decimal(10, 2)), N'全新未拆，去年军训囤多了用不完', N'在售', CAST(N'2026-07-03T10:44:50.203' AS DateTime), 6, 7, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (32, N'羽毛球一桶（5支）', CAST(30.00 AS Decimal(10, 2)), N'九五新仅打过三次，送手胶两卷', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 7, 4, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (33, N'柠檬味气泡水（整箱）', CAST(20.00 AS Decimal(10, 2)), N'快递买多了一箱，未拆封', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 5, 6, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (34, N'运动手表', CAST(120.00 AS Decimal(10, 2)), N'用了半年，心率/计步/防水，换新出旧', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 1, 5, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (35, N'全新口红（豆沙色）', CAST(39.00 AS Decimal(10, 2)), N'朋友送的色号不合适，仅试色', N'在售', CAST(N'2026-07-03T10:44:50.207' AS DateTime), 4, 7, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (36, N'动漫手办摆件', CAST(2.50 AS Decimal(10, 2)), N'小黑子懂的都懂', N'在售', CAST(N'2026-07-03T10:44:50.210' AS DateTime), 5, 6, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (37, N'美术橡皮擦套装（4块）', CAST(8.00 AS Decimal(10, 2)), N'买多了出半套', N'在售', CAST(N'2026-07-03T10:44:50.210' AS DateTime), 3, 3, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
+INSERT [dbo].[goods] ([goods_id], [title], [price], [description], [status], [created_time], [category_id], [seller_id], [audit_admin_id], [audit_time]) VALUES (38, N'纯牛奶整箱（16盒）', CAST(35.00 AS Decimal(10, 2)), N'日期新鲜，囤太多喝不完', N'在售', CAST(N'2026-07-03T10:44:50.210' AS DateTime), 5, 4, 2, CAST(N'2026-07-04T23:10:58.480' AS DateTime))
 SET IDENTITY_INSERT [dbo].[goods] OFF
 GO
 
